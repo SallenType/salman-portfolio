@@ -1,0 +1,67 @@
+---
+import profile from '../../assets/images/MyPhoto.jpeg';
+---
+
+<section class="min-h-screen flex items-center relative overflow-hidden" id="hero">
+  <div class="absolute inset-0 -z-10 flex justify-center items-center pointer-events-none">
+    <div class="w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[var(--color-primary)]/10 blur-[100px] rounded-full"></div>
+  </div>
+
+  <div class="container flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16 pt-20 pb-12">
+    
+    <div class="max-w-2xl text-center md:text-left flex flex-col items-center md:items-start z-10">
+      
+      <div class="inline-block px-4 py-1.5 mb-6 border border-[var(--color-border)] bg-[var(--color-card)]/50 backdrop-blur-sm rounded-full">
+        <p class="text-xs tracking-[0.2em] uppercase text-muted font-medium">
+          Muhammad Salman Hanan Hakim
+        </p>
+      </div>
+
+      <h1 class="text-5xl md:text-6xl lg:text-7xl fw-bold leading-tight mb-4 tracking-tighter">
+        Software <span class="text-[var(--color-primary)]">Engineer</span> <br />
+        <span class="text-3xl md:text-4xl text-muted fw-medium tracking-normal mt-2 block">
+          & Fullstack Developer.
+        </span>
+      </h1>
+
+      <p class="text-lg text-muted mb-8 leading-relaxed max-w-lg">
+        Building scalable web applications and robust backend architectures. Focused on writing clean, efficient code to create seamless digital experiences.
+      </p>
+
+      <div class="flex flex-wrap gap-4 justify-center md:justify-start w-full">
+        <a href="#projects" class="btn btn-primary group flex items-center justify-center gap-2 min-w-[160px]">
+          View Projects
+          <span class="transition-transform group-hover:translate-x-1">→</span>
+        </a>
+        <a href="#contact" class="btn btn-outline min-w-[160px] text-center">
+          Let's Connect
+        </a>
+      </div>
+      
+      <div class="mt-12 flex flex-wrap gap-4 md:gap-6 text-sm text-muted font-medium border-t border-[var(--color-border)] pt-6 w-full justify-center md:justify-start">
+         <span>Fullstack Web</span>
+         <span class="w-1 h-1 rounded-full bg-[var(--color-primary)] self-center hidden md:block"></span>
+         <span>Backend Architecture</span>
+         <span class="w-1 h-1 rounded-full bg-[var(--color-primary)] self-center hidden md:block"></span>
+         <span>Interactive 3D</span>
+      </div>
+
+    </div>
+
+    <div class="relative flex-shrink-0 group z-10 mb-8 md:mb-0">
+      <div class="absolute -inset-2 border border-[var(--color-primary)]/30 rounded-2xl rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+      <div class="absolute -inset-2 border border-[var(--color-border)] rounded-2xl -rotate-3 group-hover:-rotate-6 transition-transform duration-500"></div>
+      
+      <div class="relative w-48 h-48 md:w-64 md:h-64 rounded-xl overflow-hidden shadow-2xl bg-[var(--color-card)]">
+        <div class="absolute inset-0 bg-[var(--color-primary)]/10 mix-blend-overlay group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+        <img 
+          src={profile.src} 
+          alt="Salman"
+          class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-500 grayscale-[20%] group-hover:grayscale-0"
+        />
+      </div>
+    </div>
+
+  </div>
+  <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[var(--color-bg)] to-transparent pointer-events-none z-0"></div>
+</section>

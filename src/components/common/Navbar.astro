@@ -1,0 +1,77 @@
+---
+---
+
+<header 
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent"
+>
+  <div 
+    id="nav-bg"
+    class="absolute inset-0 bg-[var(--color-bg)]/70 backdrop-blur-md -z-10 transition-opacity duration-300 opacity-0" 
+  ></div>
+
+  <div class="container flex items-center justify-between h-16 md:h-20 transition-all duration-300">
+    
+    <a href="#" class="text-lg fw-bold tracking-widest uppercase flex items-center gap-1 group">
+      Salman
+      <span class="text-[var(--color-primary)] font-mono animate-pulse">
+        _
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm fw-medium text-muted">
+      
+      <a href="#about" class="relative group hover:text-[var(--color-text)] transition-colors py-2">
+        <span class="text-xs text-[var(--color-primary)] opacity-70 mr-1 font-mono">01.</span>
+        About
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[var(--color-primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      
+      <a href="#projects" class="relative group hover:text-[var(--color-text)] transition-colors py-2">
+        <span class="text-xs text-[var(--color-primary)] opacity-70 mr-1 font-mono">02.</span>
+        Projects
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[var(--color-primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      
+      <a href="#contact" class="relative group hover:text-[var(--color-text)] transition-colors py-2">
+        <span class="text-xs text-[var(--color-primary)] opacity-70 mr-1 font-mono">03.</span>
+        Contact
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-[var(--color-primary)] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+
+      <a href="#" class="ml-4 px-4 py-2 border border-[var(--color-border)] rounded-md hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 transition-all font-mono text-xs">
+        Resume
+      </a>
+
+    </nav>
+
+    <button class="md:hidden flex flex-col justify-center items-end gap-1.5 w-8 h-8 z-50 group cursor-pointer border-none bg-transparent">
+      <span class="w-6 h-[2px] bg-[var(--color-text)] group-hover:bg-[var(--color-primary)] transition-colors"></span>
+      <span class="w-6 h-[2px] bg-[var(--color-text)] group-hover:bg-[var(--color-primary)] transition-colors"></span>
+      <span class="w-4 h-[2px] bg-[var(--color-text)] group-hover:bg-[var(--color-primary)] transition-colors"></span>
+    </button>
+
+  </div>
+</header>
+
+<script is:inline>
+  // Efek transisi Navbar saat di-scroll
+  const navbar = document.getElementById('navbar');
+  const navBg = document.getElementById('nav-bg');
+
+  window.addEventListener('scroll', () => {
+    // Jika scroll lebih dari 50px, munculkan background blur
+    if (window.scrollY > 50) {
+      navbar.classList.add('border-[var(--color-border)]/50');
+      navbar.classList.remove('border-transparent');
+      navBg.classList.remove('opacity-0');
+      navBg.classList.add('opacity-100');
+    } else {
+      // Jika di paling atas, navbar kembali 100% transparan
+      navbar.classList.remove('border-[var(--color-border)]/50');
+      navbar.classList.add('border-transparent');
+      navBg.classList.add('opacity-0');
+      navBg.classList.remove('opacity-100');
+    }
+  });
+</script>

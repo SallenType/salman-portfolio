@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+/* =========================
+   FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   ROOT THEME (DARK + RED)
+========================= */
+:root {
+  /* BACKGROUND */
+  --color-bg: #0f0f13;
+  --color-bg-soft: #15151b;
+
+
+  /* PRIMARY (RED ACCENT) */
+  --color-primary: #06b6d4; /* Cyan */
+  --color-primary-hover: #0891b2;
+  --color-primary-soft: rgba(6, 182, 212, 0.1);
+
+  /* TEXT */
+  --color-text: #e5e7eb;
+  --color-text-muted: #9ca3af;
+
+  /* BORDER */
+  --color-border: #1f2937;
+
+  /* CARD */
+  --color-card: #111116;
+
+  /* FONT */
+  --font-family: 'Inter', sans-serif;
+
+  /* FONT SIZE */
+  --fs-display: 52px;
+  --fs-h1: 42px;
+  --fs-h2: 32px;
+  --fs-h3: 28px;
+  --fs-h4: 22px;
+
+  --fs-p-lg: 18px;
+  --fs-p-md: 16px;
+  --fs-p-sm: 14px;
+  --fs-p-xs: 12px;
+
+  /* LINE HEIGHT */
+  --lh-display: 72px;
+  --lh-h1: 52px;
+  --lh-h2: 42px;
+  --lh-h3: 38px;
+  --lh-h4: 34px;
+
+  --lh-p-lg: 28px;
+  --lh-p-md: 24px;
+  --lh-p-sm: 20px;
+  --lh-p-xs: 16px;
+
+  /* FONT WEIGHT */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* SPACING */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+
+  /* RADIUS */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* SHADOW */
+  --shadow-sm: 0px 1px 2px rgba(0,0,0,0.2);
+  --shadow-md: 0px 4px 10px rgba(0,0,0,0.3);
+  --shadow-lg: 0px 10px 30px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   RESET
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--fs-p-md);
+  line-height: var(--lh-p-md);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* =========================
+   GLOBAL ELEMENT
+========================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 10px;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+.text-display {
+  font-size: var(--fs-display);
+  line-height: var(--lh-display);
+}
+
+.h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); }
+.h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); }
+.h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); }
+.h4 { font-size: var(--fs-h4); line-height: var(--lh-h4); }
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.fw-light { font-weight: var(--fw-light); }
+.fw-regular { font-weight: var(--fw-regular); }
+.fw-medium { font-weight: var(--fw-medium); }
+.fw-bold { font-weight: var(--fw-bold); }
+
+/* =========================
+   BUTTON SYSTEM
+========================= */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-lg);
+  font-weight: var(--fw-medium);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Primary */
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Outline */
+.btn-outline {
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* =========================
+   CARD (PROJECT, SECTION)
+========================= */
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
