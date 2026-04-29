@@ -1,6 +1,6 @@
 ---
-// Nanti kamu bisa import gambar aslimu di sini
-// import project1 from '../../assets/images/project1.jpg';
+import project1 from '../../assets/images/project-1.png';
+import project2 from '../../assets/images/project-2.png';
 ---
 
 <section id="projects" class="py-24 relative z-10 bg-[var(--color-bg-soft)]/20 border-t border-[var(--color-border)]/50">
@@ -14,74 +14,65 @@
       <div class="flex-1 h-[1px] bg-[var(--color-border)] ml-2 md:ml-6"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       
       <div class="card group flex flex-col overflow-hidden p-0 hover:border-[var(--color-primary)] transition-all duration-500">
-        <div class="h-48 bg-[var(--color-border)]/30 overflow-hidden relative">
+        <div class="h-56 bg-[var(--color-border)]/30 overflow-hidden relative">
           <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-card)] to-transparent z-10"></div>
-          <div class="w-full h-full flex items-center justify-center font-mono text-muted/50 text-sm">Image Placeholder</div>
+          
+          <div class="absolute top-4 right-4 z-20 px-3 py-1 bg-[var(--color-bg)]/80 backdrop-blur-md border border-[var(--color-border)] rounded-full text-[10px] font-mono text-muted">
+            AUG 2025
+          </div>
+          
+          <img 
+            src={project2.src} 
+            alt="Avisena Hospital HRIS" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" 
+          />
         </div>
         
-        <div class="p-6 flex-1 flex flex-col">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="text-xl fw-bold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">Carwash Management System</h3>
-            <a href="#" class="text-muted hover:text-[var(--color-primary)] transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            </a>
-          </div>
-          <p class="text-muted text-sm leading-relaxed mb-6 flex-1">
-            A fullstack web application to manage bookings, track services, and handle customer data efficiently. Built with clean architecture and responsive design.
+        <div class="p-8 flex-1 flex flex-col">
+          <h3 class="text-2xl fw-bold text-[var(--color-text)] mb-3 group-hover:text-[var(--color-primary)] transition-colors tracking-tight">
+            Avisena Hospital HRIS
+          </h3>
+          <p class="text-muted text-md leading-relaxed mb-8 flex-1">
+            An integrated Human Resource Information System for Avisena General Hospital. Designed to streamline employee data management, automating attendance tracking, leave requests, and overtime calculations.
           </p>
           <div class="flex flex-wrap gap-2 mt-auto">
-            <span class="px-2 py-1 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded text-xs font-mono">Next.js</span>
-            <span class="px-2 py-1 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded text-xs font-mono">PostgreSQL</span>
-            <span class="px-2 py-1 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded text-xs font-mono">Tailwind</span>
+            <span class="px-3 py-1 bg-[var(--color-primary)]/5 text-[var(--color-primary)] border border-[var(--color-primary)]/20 rounded text-xs font-mono">React.js</span>
+            <span class="px-3 py-1 bg-[var(--color-primary)]/5 text-[var(--color-primary)] border border-[var(--color-primary)]/20 rounded text-xs font-mono">Express.js</span>
+            <span class="px-3 py-1 bg-[var(--color-primary)]/5 text-[var(--color-primary)] border border-[var(--color-primary)]/20 rounded text-xs font-mono">React Native</span>
+            <span class="px-3 py-1 bg-[var(--color-primary)]/5 text-[var(--color-primary)] border border-[var(--color-primary)]/20 rounded text-xs font-mono">PostgreSQL</span>
           </div>
         </div>
       </div>
 
       <div class="card group flex flex-col overflow-hidden p-0 hover:border-[var(--color-primary)] transition-all duration-500">
-        <div class="h-48 bg-[var(--color-border)]/30 overflow-hidden relative">
+        <div class="h-56 bg-[var(--color-border)]/30 overflow-hidden relative">
           <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-card)] to-transparent z-10"></div>
-          <div class="w-full h-full flex items-center justify-center font-mono text-muted/50 text-sm">Image Placeholder</div>
+          
+          <div class="absolute top-4 right-4 z-20 px-3 py-1 bg-[var(--color-bg)]/80 backdrop-blur-md border border-[var(--color-border)] rounded-full text-[10px] font-mono text-muted">
+            FEB 2025
+          </div>
+          
+          <img 
+            src={project1.src} 
+            alt="SMKN 1 Cimahi E-Library" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" 
+          />
         </div>
         
-        <div class="p-6 flex-1 flex flex-col">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="text-xl fw-bold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">3D Character Topology</h3>
-            <a href="#" class="text-muted hover:text-[var(--color-primary)] transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            </a>
-          </div>
-          <p class="text-muted text-sm leading-relaxed mb-6 flex-1">
-            High-poly sculpting and retopology for optimized rendering. Focused on edge flow, UV mapping, and preparing models for game engine integration.
+        <div class="p-8 flex-1 flex flex-col">
+          <h3 class="text-2xl fw-bold text-[var(--color-text)] mb-3 group-hover:text-[var(--color-primary)] transition-colors tracking-tight">
+            SMKN 1 Cimahi E-Library
+          </h3>
+          <p class="text-muted text-md leading-relaxed mb-8 flex-1">
+            A digital library management system aimed at streamlining book circulation. It empowers school librarians to efficiently manage book inventories, memberships, and track borrowing/returning transaction histories.
           </p>
           <div class="flex flex-wrap gap-2 mt-auto">
-            <span class="px-2 py-1 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded text-xs font-mono">Blender</span>
-            <span class="px-2 py-1 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded text-xs font-mono">Sculpting</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card group flex flex-col overflow-hidden p-0 hover:border-[var(--color-primary)] transition-all duration-500">
-        <div class="h-48 bg-[var(--color-border)]/30 overflow-hidden relative">
-          <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-card)] to-transparent z-10"></div>
-          <div class="w-full h-full flex items-center justify-center font-mono text-muted/50 text-sm">Image Placeholder</div>
-        </div>
-        
-        <div class="p-6 flex-1 flex flex-col">
-          <div class="flex justify-between items-start mb-4">
-            <h3 class="text-xl fw-bold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">Void/Core Pixel Aesthetics</h3>
-            <a href="#" class="text-muted hover:text-[var(--color-primary)] transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            </a>
-          </div>
-          <p class="text-muted text-sm leading-relaxed mb-6 flex-1">
-            A collection of 2D pixel art assets and environment designs focused on dark, logic-core aesthetics, meant for an upcoming indie game prototype.
-          </p>
-          <div class="flex flex-wrap gap-2 mt-auto">
-            <span class="px-2 py-1 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded text-xs font-mono">Pixel Art</span>
-            <span class="px-2 py-1 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded text-xs font-mono">Indie Dev</span>
+            <span class="px-3 py-1 bg-[var(--color-primary)]/5 text-[var(--color-primary)] border border-[var(--color-primary)]/20 rounded text-xs font-mono">Laravel</span>
+            <span class="px-3 py-1 bg-[var(--color-primary)]/5 text-[var(--color-primary)] border border-[var(--color-primary)]/20 rounded text-xs font-mono">Bootstrap 5</span>
+            <span class="px-3 py-1 bg-[var(--color-primary)]/5 text-[var(--color-primary)] border border-[var(--color-primary)]/20 rounded text-xs font-mono">MySQL</span>
           </div>
         </div>
       </div>
